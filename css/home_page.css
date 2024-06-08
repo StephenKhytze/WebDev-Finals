@@ -1,0 +1,168 @@
+section{
+  background: #FFFFFF;
+  gap: 3rem;
+}
+
+.mid_container {
+  display: flex;
+}
+
+.mid_container:nth-of-type(odd) .home_text{
+  padding: 5rem 5rem 5rem 10rem;
+}
+
+.mid_container:nth-of-type(even){
+  flex-direction: row-reverse;
+}
+
+.mid_container:nth-of-type(even) .home_text{
+  padding: 5rem 10rem 5rem 5rem;
+  background-color: #dadada;
+}
+
+.home_text {
+  background: #FFFFFF;
+  width: 60%;
+  /* padding: 7.5rem 15.5rem 7.5rem 7.5rem; */
+  line-height: 2.5;
+  letter-spacing: 0.1rem;
+  font-family: "Montserrat Extra Light";
+  font-size: 1.7rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.cut_img {
+  background-image: url(/resources/img/midbg.png);
+  background-size: cover;
+  text-align: right;
+  width: 40%;
+  padding: 3rem;
+  height: auto;
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  font-family: "Montserrat Regular";
+  letter-spacing: 2px;
+  font-size: 7rem;
+  font-weight: 650;
+  line-height: 0.9;
+}
+
+.mid_container:nth-of-type(2) .cut_img{
+  background-image: url(/resources/img/midbg2.png);
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.mid_container:nth-of-type(3) .home_text{
+  display: grid;
+  grid-template-columns: 5fr 1fr 1fr 8fr;
+  align-items: center;
+}
+
+.mid_container:nth-of-type(3) .home_text h2{
+  font-size: 4rem;
+}
+
+.mid_container:nth-of-type(3) #home_booking_white_line{
+  width: 2px;
+  height: 100%;
+  display: block;
+  background-color: black;
+}
+
+.mid_container:nth-of-type(3) #booking_form{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.mid_container:nth-of-type(3) #booking_form_cointainer{
+  width: 100%;
+  display: block;
+  align-items: center;
+}
+
+.mid_container:nth-of-type(3) .cut_img{
+  background-image: url(/resources/img/midbg3.png);
+}
+
+/* MOBILE VIEW */
+@media screen and (max-width: 480px){  
+  #home_page_header h2{
+    margin-top: 8rem;
+    font-size: 5rem;
+  }
+  .mid_container{
+    flex-direction: column-reverse;
+    margin: 0;
+    background-image: url(/resources/img/midbg.png);
+    background-size: cover;
+  }
+  .mid_container:nth-of-type(2){
+    flex-direction: column-reverse;
+    background-image: url(/resources/img/midbg2.png)
+  }
+  .mid_container:nth-of-type(3){
+    background-image: url(/resources/img/midbg3.png)
+  }
+  .home_text, .cut_img, .mid_container:nth-of-type(2) .cut_img, .mid_container:nth-of-type(3) .cut_img, .mid_container:nth-of-type(even) .home_text{
+    width: 100%;
+    background-image: none;
+    background: rgba(0, 0, 0, 0.65);
+  }
+  .home_text{
+    color: #FFFFFF;
+    text-align: justify;
+    padding: 5.5rem;
+    line-height: 2;
+  }
+  .mid_container:nth-of-type(3) .home_text{
+    width: 100%;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .mid_container:nth-of-type(3) .home_text .input_booking{
+    width: 300px;
+  }
+  .mid_container:nth-of-type(3) #home_booking_white_line{
+    width: 315px;
+    height: 2px;
+    margin-bottom: 5rem;
+    display: block;
+    background-color: #FFFFFF;
+  }
+  .cut_img{
+    justify-content: flex-start;
+  }
+  .cut_text{
+    text-align: left;
+  }
+}
+
+/* FONT */
+
+@font-face {
+  font-family: "TW Cent";
+  src: url(/resources/fonts/TW_Cent.TTF);
+}
+
+@font-face {
+  font-family: "Montserrat Extra Light";
+  src: url(/resources/fonts/Montserrat-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat Light";
+  src: url(/resources/fonts/Montserrat-Light.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url(/resources/fonts/Montserrat-Regular.ttf);
+}

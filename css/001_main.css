@@ -1,0 +1,340 @@
+/* -------------RESETS------------- */
+/*Resets are used for overwriting default html tag properties*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  font,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td {
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+    scroll-behavior: smooth;
+    list-style: none;
+  }
+  html {
+    font-size: 62.5%;
+    height: 100%;
+  }
+  body {
+    color: #2b2b2b;
+    font-family: "Montserrat Light";
+    font-size: 1.6rem;
+    overflow-x: hidden;
+    line-height: 1.4;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  article,
+  aside,
+  footer,
+  header,
+  nav,
+  section,
+  time {
+    display: block;
+  }
+  a {
+    text-decoration: none;
+  }
+  img {
+    max-width: 100%;
+  }
+
+/* CSS */
+
+#header {
+  color: white;
+  background-color: #00000011;
+  transition: 0.5s ease-in-out;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0px;
+  display: flex;
+  padding: 0 5rem;
+}
+
+#header.black{
+  background-color: #000000de;
+  transition: 0.5s ease-in-out;
+}
+
+#header #logo #home_logo_rectangle {
+    height: 50px;
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+}
+
+#header.black #logo #home_logo_rectangle {
+  height: 40px;
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+
+#header #header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    height: 100px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#header.black #header_container {
+  height: 70px;
+  transition: 0.5s ease-in-out;
+}
+
+#header #nav_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    gap: 1rem;
+}
+
+#header .nav_button a {
+  width: 8vw;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: transparent 3px solid;
+  transition: 0.5s ease-in-out;
+  height: 80px;
+  color: white;
+}
+
+#header.black .nav_button a {
+  height: 60px;
+}
+
+#header .nav_button a:hover{
+  background-color: rgb(24, 24, 24, 0.8);
+  border-bottom: #8a8a8a 3px solid;
+  cursor: pointer;
+}
+
+.button_text {
+    color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+    box-shadow: #2b2b2b;
+}
+
+/* BANNER */
+#banner{
+  height: 67vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shadow_text {
+  text-shadow: 0 0 10px black, 0 0 10px black;
+  color: white;
+}
+
+#banner .banner_text {
+  font-weight: 600;
+  font-size: 8rem;
+  font-family: "Montserrat Light";
+  /* -webkit-text-stroke:0.1rem #000000; */
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+#banner img {
+  width: 100%;
+}
+
+/* FOOTER */
+
+footer {
+  background-image: url(/resources/etc/footerbg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#top_footer, #bottom_footer {
+  display: flex;
+  background-color: #000000ca;
+  color: white;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+#bottom_footer {
+  display: flex;
+  flex-direction: column;
+  padding: none;
+  gap: 3rem;
+}
+
+#top_footer ul {
+  line-height: 2;
+}
+
+#top_footer ul li a {
+  color: #adadad;
+  font-size: 1.9rem;
+  font-weight: 400;
+  transition: 0.25s ease-in-out;
+}
+
+#top_footer ul li a:hover {
+  font-weight: 600;
+  color: #FFFFFF;
+  transition: 0.25s ease-in-out;
+}
+
+#top_footer #bottom_logo {
+  width: 200px;
+}
+
+#second_options {
+  text-align: right;
+}
+
+.options {
+  line-height: 2.5;
+}
+
+#socials {
+  width: 300px;
+  display: block;
+}
+
+#footer_separator{
+  background-color: #000000de;
+}
+
+#footer_separator span{
+  display: block;
+  background-color: #FFFFFF;
+  height: 0.5px;
+  width: 100%;
+}
+
+/* MOBILE VIEW */
+@media screen and (max-width: 480px){
+  #banner{
+    height: 100%;
+  }  
+  #header #nav{
+    display: none;
+  }
+  #banner h2{
+    font-size: 4rem;
+  }
+  #top_footer #bottom_logo{
+    width: 100px;
+  }
+  #top_footer ul li a{
+    font-size: 16px;
+  }
+  #top_footer ul li a:hover {
+    font-weight: 100;
+    color: #adadad;
+  }
+}
+
+/* FONT */
+
+@font-face {
+  font-family: "TW Cent";
+  src: url(/resources/fonts/TW_Cent.TTF);
+}
+
+@font-face {
+  font-family: "Montserrat Extra Light";
+  src: url(/resources/fonts/Montserrat-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat Light";
+  src: url(/resources/fonts/Montserrat-Light.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url(/resources/fonts/Montserrat-Regular.ttf);
+}
